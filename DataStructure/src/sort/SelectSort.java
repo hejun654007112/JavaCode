@@ -2,9 +2,7 @@ package sort;
 
 
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
-import java.util.logging.SimpleFormatter;
 
 //选择排序
 public class SelectSort {
@@ -23,7 +21,7 @@ public class SelectSort {
 
         }
 
-        public static int[] selectSort ( int[] arr){
+        public static void selectSort (int[] arr){
             for (int i = 0; i < arr.length - 1; i++) {
                 int min = arr[i];
                 int index = i;
@@ -39,6 +37,6 @@ public class SelectSort {
 
                 }
             }
-            return arr;
+
         }
     }
