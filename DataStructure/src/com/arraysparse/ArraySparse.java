@@ -1,7 +1,6 @@
 package com.arraysparse;
 
 import java.io.*;
-import java.util.ArrayList;
 
 /*
     稀疏数组 (压缩数组)
@@ -71,7 +70,7 @@ public class ArraySparse {
             System.out.println();
         }
         //将稀疏数组写入文件中
-        File file = new File(".\\sparse.txt");
+        File file = new File("sparse.txt");
         file.createNewFile();
         FileWriter fileWriter = new FileWriter(file);
         for (int[] array:sparseArray) {

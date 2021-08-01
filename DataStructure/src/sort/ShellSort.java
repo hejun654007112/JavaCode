@@ -28,7 +28,7 @@ public class ShellSort {
                 }
             }
             count++;
-            System.out.println("第"+count+"趟排序：" + Arrays.toString(arr));
+//            System.out.println("第"+count+"趟排序：" + Arrays.toString(arr));
         }
     }
 

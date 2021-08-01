@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="day10:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/day10_jar</output-path>
+    <root id="archive" name="day10.jar">
+      <element id="file-copy" path="$PROJECT_DIR$/out/production/day10/com/offcn/ArrayUtil.class" />
+    </root>
+  </artifact>
+</component>

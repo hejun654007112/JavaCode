@@ -10,6 +10,7 @@ import java.util.Arrays;
  */
 public class QuickSort {
 
+    //以中间为轴数据
     public static void quickSort(int[] arr, int left, int right) {
         //记录左右下标
         int l = left;
@@ -62,9 +63,45 @@ public class QuickSort {
         }
     }
 
+    //以第一个数据为轴数据
+    public static void quickSort1(int[] arr, int left, int right) {
+        int mid;
+        if (left < right) {
+            mid = partition(arr, left, right);
+            //向左递归
+            quickSort1(arr, left, mid - 1);
+            //向右递归
+            quickSort1(arr, mid + 1, right);
+        }
+    }
+
+    /**
+     * 以轴数据排序分组
+     *
+     * @param arr
+     * @param left
+     * @param right
+     * @return
+     */
+
+    public static int partition(int[] arr, int left, int right) {
+        int pivot = arr[left];
+        while (left < right) {
+            while (left < right && arr[right] >= pivot)
+                right--;
+                arr[left] = arr[right];
+
+            while (left < right && arr[left] <= pivot)
+                left++;
+                arr[right] = arr[left];
+        }
+        arr[left] = pivot;
+        return left;
+    }
+
     public static void main(String[] args) {
-        int[] arr = {3, 1, 325, 21, 6, 32, 667, 23, 7623, 7};
-        quickSort(arr,0,arr.length-1);
+        int[] arr = {1, 2, 9, 5, 6, 7, 8};
+        quickSort1(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
     }
 }
